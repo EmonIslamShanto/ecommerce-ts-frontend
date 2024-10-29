@@ -13,7 +13,7 @@ import { server } from "../redux/store";
 const Cart = () => {
 
   const dispatch = useDispatch();
-  const { cartItems, subtotal, tax, total, shippingCharges, discount} = useSelector((state: { cartReducer: CartReducerInitialState }) => state.cartReducer);
+  const { cartItems, subtotal, tax, total, shippingCharge, discount} = useSelector((state: { cartReducer: CartReducerInitialState }) => state.cartReducer);
 
   const [couponCode, setCouponCode] = useState<string>("");
   const [isvalidCouponCode, setIsvalidCouponCode] = useState<boolean>(false);
@@ -75,7 +75,7 @@ const Cart = () => {
       </main>
       <aside>
         <p>Subtotal: ৳ {subtotal}</p>
-        <p>Shipping Charges: ৳ {shippingCharges}</p>
+        <p>Shipping Charges: ৳ {shippingCharge}</p>
         <p>Tax: ৳ {tax}</p>
         <p>Discount: <em className="red"> - ৳ {discount}</em></p>
         <p><b>Total: ৳ {total}</b></p>
