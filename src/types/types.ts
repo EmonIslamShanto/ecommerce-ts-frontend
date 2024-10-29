@@ -33,6 +33,7 @@ export type CartItem = {
     photo: string;
     name: string;
     price: number;
+    stock: number;
 }
 
 export type OrderItem = Omit<CartItem, "stock"> & {
