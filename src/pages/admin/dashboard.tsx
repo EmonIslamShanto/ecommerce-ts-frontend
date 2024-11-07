@@ -198,7 +198,7 @@ const CategoryItem = ({ color, value, heading }: CategoryItemProps) => (
         }}
       ></div>
     </div>
-    <span>{value}%</span>
+    <span>{value}</span>
   </div>
 );
 
